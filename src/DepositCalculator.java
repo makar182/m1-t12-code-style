@@ -8,11 +8,11 @@ public class DepositCalculator {
     static double calculateComplexPercent(double a, double y, int d) {
         double pay = a * Math.pow((1 + y / 12), 12 * d);
 
-        return pow (pay, 2);
+        return pow(pay, 2);
     }
 
     static double calculateSimplePercent(double doubleAmount, double double_year_rate, int deposit_period) {
-        return pow(doubleAmount+doubleAmount * double_year_rate * deposit_period, 2);
+        return pow(doubleAmount + doubleAmount * double_year_rate * deposit_period, 2);
     }
 
     static double pow(double value, int places) {
@@ -43,8 +43,7 @@ public class DepositCalculator {
 
         if (action == 1) {
             finalAmount = calculateSimplePercent(amount, 0.06, period);
-        }
-        else if (action == 2) {
+        } else if (action == 2) {
             finalAmount = calculateComplexPercent(amount, 0.06, period);
         }
 
