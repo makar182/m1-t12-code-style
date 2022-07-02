@@ -5,13 +5,13 @@ public class DepositCalculator {
         menu();
     }
 
-    static double calculateComplexPercent(double a, double y, int d) {
-        double pay = a * Math.pow((1 + y / 12), 12 * d);
+    static double calculateComplexPercent(double amount, double yearRate, int depositPeriod) {
+        double pay = amount * Math.pow((1 + yearRate / 12), 12 * depositPeriod);
         return pow(pay, 2);
     }
 
-    static double calculateSimplePercent(double doubleAmount, double double_year_rate, int deposit_period) {
-        return pow(doubleAmount + doubleAmount * double_year_rate * deposit_period, 2);
+    static double calculateSimplePercent(double amount, double yearRate, int depositPeriod) {
+        return pow(amount + amount * yearRate * depositPeriod, 2);
     }
 
     static double pow(double value, int places) {
